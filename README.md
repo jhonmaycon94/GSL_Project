@@ -1,4 +1,4 @@
-# GSL_Project
-repository to develop the MIT GSL app
+# Sensori
+A gaming-based learning app to help kids to learn.
 
 **EM CONSTRUÇÃO**
