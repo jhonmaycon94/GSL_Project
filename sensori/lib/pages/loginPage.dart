@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sensori/utils/sensoriTheme.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key key, this.title}) : super(key: key);
@@ -30,7 +31,6 @@ class _LoginPageState extends State<LoginPage> {
     // Scaffold is a layout for the major Material Components.
     return new Scaffold(
         appBar: new AppBar(
-          backgroundColor: Colors.purple,
           leading: new IconButton(
             icon: Icon(Icons.menu),
             tooltip: 'Navigation menu',

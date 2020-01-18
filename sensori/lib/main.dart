@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:sensori/pages/loginPage.dart';  
+import 'package:sensori/pages/loginPage.dart';
+import 'package:sensori/utils/sensoriTheme.dart';  
 
 void main() {
   runApp(MaterialApp(
-    home: LoginPage(title: 'Sensori')
+    home: LoginPage(title: 'Sensori'),
+    theme: sensoriTheme,
   ));
 }
