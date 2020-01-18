@@ -47,76 +47,56 @@ class _LoginPageState extends State<LoginPage> {
         ),
         // body is the majority of the screen.
         body: new Container(
-          padding: EdgeInsets.all(20.0),
+          padding: EdgeInsets.all(80.0),
           child: new Column(
             children: <Widget>[
-              new Row(
-                children: <Widget>[
-                  new Container(
-                    padding: EdgeInsets.all(20.0),
-                    child: new Image.asset('assets/logo.png'),
-                  ),
-                ],
-              ),
-              new Row(
-                children: <Widget>[
-                  new Container(
-                    padding: EdgeInsets.all(20.0),
-                    child: new Form(
-                        key: _formKey,
-                        child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              TextFormField(
-                                  decoration: const InputDecoration(
-                                    labelText: 'username',
-                                    hintText: 'Enter your username',
-                                  ),
-                                  validator: (value) {
-                                    if (value.isEmpty) {
-                                      return 'username cannot be empty';
-                                    }
-                                    return null;
-                                  },
-                                  onSaved: (value) => _username = value),
-                              new TextFormField(
-                                  decoration: const InputDecoration(
-                                    labelText: 'password',
-                                    hintText: 'Enter your password',
-                                  ),
-                                  validator: (value) {
-                                    if (value.isEmpty) {
-                                      return 'password cannot be empty';
-                                    }
-                                    return null;
-                                  },
-                                  obscureText: true,
-                                  onSaved: (value) => _password = value),
-                              new RaisedButton(
-                                  child: new Text("Login",
-                                      style: new TextStyle(fontSize: 20.0)),
-                                  onPressed: validateAndSave)
-                            ])),
-                  ),
-                ],
-              ),
-              new Row(
-                children: <Widget>[
-                  new Container(
-                      child: new Column(children: <Widget>[
-                    new Text("don't have an account?"),
-                    new RaisedButton(
-                      child: new Text(
-                        "Register",
-                        style: new TextStyle(fontSize: 20.0),
-                      ),
-                      onPressed: register,
-                    )
-                  ]))
-                ],
-              ),
+              new Image.asset('assets/logo.png'),
+              new Form(
+                  key: _formKey,
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        TextFormField(
+                            decoration: const InputDecoration(
+                              labelText: 'username',
+                              hintText: 'Enter your username',
+                            ),
+                            validator: (value) {
+                              if (value.isEmpty) {
+                                return 'username cannot be empty';
+                              }
+                              return null;
+                            },
+                            onSaved: (value) => _username = value),
+                        new TextFormField(
+                            decoration: const InputDecoration(
+                              labelText: 'password',
+                              hintText: 'Enter your password',
+                            ),
+                            validator: (value) {
+                              if (value.isEmpty) {
+                                return 'password cannot be empty';
+                              }
+                              return null;
+                            },
+                            obscureText: true,
+                            onSaved: (value) => _password = value),
+                        new RaisedButton(
+                            child: new Text("Login",
+                                style: new TextStyle(fontSize: 20.0)),
+                            onPressed: validateAndSave)
+                      ])),
+              new Text("don't have an account?"),
+              new RaisedButton(
+                child: new Text(
+                  "Register",
+                  style: new TextStyle(fontSize: 20.0),
+                ),
+                onPressed: register,
+              )
             ],
           ),
-        ));
+        )
+        );
   }
 }
