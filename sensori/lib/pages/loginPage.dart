@@ -47,10 +47,15 @@ class _LoginPageState extends State<LoginPage> {
         ),
         // body is the majority of the screen.
         body: new Container(
-          padding: EdgeInsets.all(80.0),
+          padding: EdgeInsets.all(20.0),
           child: new Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              new Image.asset('assets/logo.png'),
+              new Row(
+                children: <Widget>[
+                  new Image.asset('assets/logo.png'),
+                ],
+              ),
               new Form(
                   key: _formKey,
                   child: Column(
@@ -81,22 +86,35 @@ class _LoginPageState extends State<LoginPage> {
                             },
                             obscureText: true,
                             onSaved: (value) => _password = value),
-                        new RaisedButton(
-                            child: new Text("Login",
-                                style: new TextStyle(fontSize: 20.0)),
-                            onPressed: validateAndSave)
+                        new Container(
+                          padding: EdgeInsets.all(16.0),
+                          child: new RaisedButton(
+                              child: new Text("Login",
+                                  style: new TextStyle(fontSize: 20.0)),
+                              onPressed: validateAndSave),
+                        )
                       ])),
-              new Text("don't have an account?"),
-              new RaisedButton(
-                child: new Text(
-                  "Register",
-                  style: new TextStyle(fontSize: 20.0),
-                ),
-                onPressed: register,
+              new Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  new Column(
+                    
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: <Widget>[
+                      new Text("don't have an account?"),
+                      new RaisedButton(
+                        child: new Text(
+                          "Register",
+                          style: new TextStyle(fontSize: 20.0),
+                        ),
+                        onPressed: register,
+                      )
+                    ],
+                  )
+                ],
               )
             ],
           ),
-        )
-        );
+        ));
   }
 }
