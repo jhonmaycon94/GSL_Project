@@ -49,11 +49,14 @@ class _LoginPageState extends State<LoginPage> {
         body: new Container(
           padding: EdgeInsets.all(20.0),
           child: new Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               new Row(
                 children: <Widget>[
-                  new Image.asset('assets/logo.png'),
+                  new Container(
+                    padding: EdgeInsets.only(top: 40.0),
+                    child: new Image.asset('assets/logo.png'),
+                    )
                 ],
               ),
               new Form(
@@ -98,7 +101,6 @@ class _LoginPageState extends State<LoginPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   new Column(
-                    
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
                       new Text("don't have an account?"),
