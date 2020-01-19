@@ -47,12 +47,13 @@ class _RegisterPageState extends State<RegisterPage> {
         body: new Container(
           padding: EdgeInsets.all(20.0),
           child: new Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               new Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   new Container(
-                    padding: EdgeInsets.only(top: 40.0),
+                    padding: EdgeInsets.only(top: 100.0, bottom: 100.0),
                     child: new Text("REGISTER"),
                   )
                 ],
