@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sensori/utils/sensoriTheme.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key key, this.title}) : super(key: key);
@@ -54,7 +53,7 @@ class _LoginPageState extends State<LoginPage> {
               new Row(
                 children: <Widget>[
                   new Container(
-                    padding: EdgeInsets.only(top: 40.0),
+                    padding: EdgeInsets.only(top: 40.0, left: 40.0, right: 40.0,),
                     child: new Image.asset('assets/logo.png'),
                     )
                 ],

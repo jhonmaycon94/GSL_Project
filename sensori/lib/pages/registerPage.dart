@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sensori/utils/sensoriTheme.dart';
 
 class RegisterPage extends StatefulWidget {
   RegisterPage({Key key, this.title}) : super(key: key);
@@ -21,7 +20,7 @@ class _RegisterPageState extends State<RegisterPage> {
     final form = _formKey.currentState;
     if (form.validate()) {
       form.save();
-      print("form is valid! Username: $_username, password: $_password");
+      print("form is valid! Username: $_username, password: $_password, nickname: $_nickname, cPassword: $_cPassword");
     } else {
       print("form is not valid");
     }
@@ -90,6 +89,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       decoration: const InputDecoration(
                           labelText: 'password',
                           hintText: 'Enter your password'),
+                          obscureText: true,
                       validator: (value) {
                         if (value.isEmpty) {
                           return 'password cannot be empty';
@@ -102,6 +102,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       decoration: const InputDecoration(
                           labelText: 'Confirm Password',
                           hintText: 'Confirm your password'),
+                          obscureText: true,
                       validator: (value) {
                         if (value.isEmpty) {
                           return 'password cannot be empty';
