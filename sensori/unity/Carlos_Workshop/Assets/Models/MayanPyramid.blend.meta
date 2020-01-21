@@ -1,9 +1,30 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 62467dd5b59218a4fabfe86332ed6453
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     2186277476908879412: ImportLogs
+=======
+guid: 7fea05b098637f342958c6747cd07873
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Camera
+    100002: Cube
+    100004: Light
+    100006: //RootNode
+    400000: Camera
+    400002: Cube
+    400004: Light
+    400006: //RootNode
+    2000000: Camera
+    2100000: Material
+    2300000: Cube
+    3300000: Cube
+    4300000: Cube
+    10800000: Light
+>>>>>>> 089fbf3afc2edd50766ef23eab58634299542dfb
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -84,7 +105,11 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+<<<<<<< HEAD
   animationType: 2
+=======
+  animationType: 0
+>>>>>>> 089fbf3afc2edd50766ef23eab58634299542dfb
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
