@@ -35,6 +35,7 @@ class _LoginPageState extends State<LoginPage> {
     // Scaffold is a layout for the major Material Components.
     return new Scaffold(
         appBar: new AppBar(
+          centerTitle: true,
           leading: new IconButton(
             icon: Icon(Icons.menu),
             tooltip: 'Navigation menu',

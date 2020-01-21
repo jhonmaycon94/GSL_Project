@@ -20,7 +20,8 @@ class _RegisterPageState extends State<RegisterPage> {
     final form = _formKey.currentState;
     if (form.validate()) {
       form.save();
-      print("form is valid! Username: $_username, password: $_password, nickname: $_nickname, cPassword: $_cPassword");
+      print(
+          "form is valid! Username: $_username, password: $_password, nickname: $_nickname, cPassword: $_cPassword");
     } else {
       print("form is not valid");
     }
@@ -30,12 +31,13 @@ class _RegisterPageState extends State<RegisterPage> {
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: new AppBar(
+            centerTitle: true,
             leading: new IconButton(
               icon: Icon(Icons.menu),
               tooltip: 'Navigation menun',
               onPressed: null,
             ),
-            title: new Text('Sensori'),
+            title: new Text('Register'),
             actions: <Widget>[
               new IconButton(
                 icon: Icon(Icons.search),
@@ -48,15 +50,6 @@ class _RegisterPageState extends State<RegisterPage> {
           child: new Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              new Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  new Container(
-                    padding: EdgeInsets.only(top: 100.0, bottom: 100.0),
-                    child: new Text("REGISTER"),
-                  )
-                ],
-              ),
               new Form(
                 key: _formKey,
                 child: Column(
@@ -89,7 +82,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       decoration: const InputDecoration(
                           labelText: 'password',
                           hintText: 'Enter your password'),
-                          obscureText: true,
+                      obscureText: true,
                       validator: (value) {
                         if (value.isEmpty) {
                           return 'password cannot be empty';
@@ -102,7 +95,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       decoration: const InputDecoration(
                           labelText: 'Confirm Password',
                           hintText: 'Confirm your password'),
-                          obscureText: true,
+                      obscureText: true,
                       validator: (value) {
                         if (value.isEmpty) {
                           return 'password cannot be empty';
