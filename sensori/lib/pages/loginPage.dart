@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sensori/pages/registerPage.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key key, this.title}) : super(key: key);
@@ -24,7 +25,11 @@ class _LoginPageState extends State<LoginPage> {
     }
   }
 
-  register() {}
+  register() {
+    Navigator.push(
+      context, MaterialPageRoute(builder: (context) => RegisterPage())
+    );
+  }
   @override
   Widget build(BuildContext context) {
     // Scaffold is a layout for the major Material Components.
