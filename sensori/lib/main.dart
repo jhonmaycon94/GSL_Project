@@ -6,7 +6,6 @@ import 'package:sensori/pages/registerPage.dart';
 void main() {
   runApp(MaterialApp(
     home: LoginPage(title: 'Sensori'),
-    //home: RegisterPage(title: 'Sensori'),
     theme: sensoriTheme,
   ));
 }

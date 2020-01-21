@@ -59,7 +59,7 @@ class _LoginPageState extends State<LoginPage> {
                 children: <Widget>[
                   new Container(
                     padding: EdgeInsets.only(top: 40.0, left: 40.0, right: 40.0,),
-                    child: new Image.asset('assets/logo.png'),
+                    child: new Image.asset('assets/images/logo.png'),
                     )
                 ],
               ),
