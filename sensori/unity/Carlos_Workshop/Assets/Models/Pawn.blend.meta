@@ -1,30 +1,15 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 393df607cfd545b48868db720d6c413e
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    2186277476908879412: ImportLogs
-=======
-guid: bbd658d70290d8f4aa0a1e3010987540
-ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Camera
-    100002: Light
-    100004: //RootNode
-    100006: Pawn
-    400000: Camera
-    400002: Light
-    400004: //RootNode
-    400006: Pawn
-    2000000: Camera
+    100000: //RootNode
+    400000: //RootNode
     2100000: No Name
-    2300000: Pawn
-    3300000: Pawn
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Pawn
-    10800000: Light
->>>>>>> 089fbf3afc2edd50766ef23eab58634299542dfb
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -78,7 +63,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -105,11 +90,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-<<<<<<< HEAD
   animationType: 2
-=======
-  animationType: 0
->>>>>>> 089fbf3afc2edd50766ef23eab58634299542dfb
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
