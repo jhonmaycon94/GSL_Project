@@ -48,7 +48,7 @@ class _RegisterPageState extends State<RegisterPage> {
         body: new Container(
           padding: EdgeInsets.all(20.0),
           child: new Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               new Form(
                 key: _formKey,
