@@ -32,79 +32,26 @@ class _TrophyRoomPageState extends State<TrophyRoomPage> {
           ],
         ),
         body: new Container(
-            child: new Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-              new Container(
-                  decoration: new BoxDecoration(
-                    borderRadius: new BorderRadius.circular(5.0),
-                    color: Colors.orange,
+            child: new Stack(
+          children: <Widget>[
+            new Container(
+              //color: Colors.redAccent,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    "assets/images/starry-background.jpg"
                   ),
-                  margin: EdgeInsets.all(10.0),
-                  child: new Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: <Widget>[
-                      new Container(
-                        child: new Text("data"),
-                      ),
-                      new Container(
-                        child: new Row(
-                          children: <Widget>[
-                            new Container(
-                              padding: EdgeInsets.all(4.0),
-                              child: new Text(
-                                "5",
-                                style: new TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 25,
-                                ),
-                              ),
-                            ),
-                            new Container(
-                              padding: EdgeInsets.all(2.0),
-                              child: new Image.asset(
-                                "assets/images/medal.png",
-                                height: 60,
-                                width: 60,
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      new Container(
-                        child: new Row(
-                          children: <Widget>[
-                            new Container(
-                              padding: EdgeInsets.all(2.0),
-                              child: new Text(
-                                "5",
-                                style: new TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 25,
-                                ),
-                              ),
-                            ),
-                            new Container(
-                              padding: EdgeInsets.all(2.0),
-                              child: new Image.asset(
-                                "assets/images/trophy.png",
-                                height: 60,
-                                width: 60,
-                              ),
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
-                  )),
-              new Container(
-                  child: new Column(
+                  fit: BoxFit.cover
+                  )
+              ),
+            ),
+            new Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   new Container(
                       decoration: new BoxDecoration(
                         borderRadius: new BorderRadius.circular(5.0),
-                        color: Colors.pink,
+                        color: Colors.orange,
                       ),
                       margin: EdgeInsets.all(10.0),
                       child: new Row(
@@ -117,7 +64,7 @@ class _TrophyRoomPageState extends State<TrophyRoomPage> {
                             child: new Row(
                               children: <Widget>[
                                 new Container(
-                                  padding: EdgeInsets.all(2.0),
+                                  padding: EdgeInsets.all(4.0),
                                   child: new Text(
                                     "5",
                                     style: new TextStyle(
@@ -153,9 +100,10 @@ class _TrophyRoomPageState extends State<TrophyRoomPage> {
                                 new Container(
                                   padding: EdgeInsets.all(2.0),
                                   child: new Image.asset(
-                                      "assets/images/trophy.png",
-                                      height: 60,
-                                      width: 60),
+                                    "assets/images/trophy.png",
+                                    height: 60,
+                                    width: 60,
+                                  ),
                                 ),
                               ],
                             ),
@@ -163,76 +111,144 @@ class _TrophyRoomPageState extends State<TrophyRoomPage> {
                         ],
                       )),
                   new Container(
-                    child: new Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        new Container(
-                            decoration: new BoxDecoration(
-                              borderRadius: new BorderRadius.circular(5.0),
-                              color: Colors.purple,
-                            ),
-                            margin: EdgeInsets.all(10.0),
-                            child: new Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: <Widget>[
-                                new Container(
-                                  child: new Text("data"),
-                                ),
-                                new Container(
-                                  child: new Row(
-                                    children: <Widget>[
-                                      new Container(
-                                        padding: EdgeInsets.all(2.0),
-                                        child: new Text(
-                                          "5",
-                                          style: new TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 25,
-                                          ),
+                      child: new Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      new Container(
+                          decoration: new BoxDecoration(
+                            borderRadius: new BorderRadius.circular(5.0),
+                            color: Colors.pink,
+                          ),
+                          margin: EdgeInsets.all(10.0),
+                          child: new Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: <Widget>[
+                              new Container(
+                                child: new Text("data"),
+                              ),
+                              new Container(
+                                child: new Row(
+                                  children: <Widget>[
+                                    new Container(
+                                      padding: EdgeInsets.all(2.0),
+                                      child: new Text(
+                                        "5",
+                                        style: new TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 25,
                                         ),
                                       ),
-                                      new Container(
-                                        padding: EdgeInsets.all(2.0),
-                                        child: new Image.asset(
-                                          "assets/images/medal.png",
-                                          height: 60,
-                                          width: 60,
-                                        ),
-                                      )
-                                    ],
-                                  ),
+                                    ),
+                                    new Container(
+                                      padding: EdgeInsets.all(2.0),
+                                      child: new Image.asset(
+                                        "assets/images/medal.png",
+                                        height: 60,
+                                        width: 60,
+                                      ),
+                                    )
+                                  ],
                                 ),
-                                new Container(
-                                  child: new Row(
-                                    children: <Widget>[
-                                      new Container(
-                                        padding: EdgeInsets.all(2.0),
-                                        child: new Text(
-                                          "5",
-                                          style: new TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 25,
-                                          ),
+                              ),
+                              new Container(
+                                child: new Row(
+                                  children: <Widget>[
+                                    new Container(
+                                      padding: EdgeInsets.all(2.0),
+                                      child: new Text(
+                                        "5",
+                                        style: new TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 25,
                                         ),
                                       ),
-                                      new Container(
-                                        padding: EdgeInsets.all(2.0),
-                                        child: new Image.asset(
+                                    ),
+                                    new Container(
+                                      padding: EdgeInsets.all(2.0),
+                                      child: new Image.asset(
                                           "assets/images/trophy.png",
                                           height: 60,
-                                          width: 60,
-                                        ),
+                                          width: 60),
+                                    ),
+                                  ],
+                                ),
+                              )
+                            ],
+                          )),
+                      new Container(
+                        child: new Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            new Container(
+                                decoration: new BoxDecoration(
+                                  borderRadius: new BorderRadius.circular(5.0),
+                                  color: Colors.purple,
+                                ),
+                                margin: EdgeInsets.all(10.0),
+                                child: new Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: <Widget>[
+                                    new Container(
+                                      child: new Text("data"),
+                                    ),
+                                    new Container(
+                                      child: new Row(
+                                        children: <Widget>[
+                                          new Container(
+                                            padding: EdgeInsets.all(2.0),
+                                            child: new Text(
+                                              "5",
+                                              style: new TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 25,
+                                              ),
+                                            ),
+                                          ),
+                                          new Container(
+                                            padding: EdgeInsets.all(2.0),
+                                            child: new Image.asset(
+                                              "assets/images/medal.png",
+                                              height: 60,
+                                              width: 60,
+                                            ),
+                                          )
+                                        ],
                                       ),
-                                    ],
-                                  ),
-                                )
-                              ],
-                            )),
-                      ],
-                    ),
-                  ),
-                ],
-              ))
-            ])));
+                                    ),
+                                    new Container(
+                                      child: new Row(
+                                        children: <Widget>[
+                                          new Container(
+                                            padding: EdgeInsets.all(2.0),
+                                            child: new Text(
+                                              "5",
+                                              style: new TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 25,
+                                              ),
+                                            ),
+                                          ),
+                                          new Container(
+                                            padding: EdgeInsets.all(2.0),
+                                            child: new Image.asset(
+                                              "assets/images/trophy.png",
+                                              height: 60,
+                                              width: 60,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                )),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ))
+                ]),
+          ],
+        )));
   }
 }
