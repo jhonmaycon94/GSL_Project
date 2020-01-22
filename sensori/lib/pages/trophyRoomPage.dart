@@ -51,12 +51,22 @@ class _TrophyRoomPageState extends State<TrophyRoomPage> {
                         child: new Row(
                           children: <Widget>[
                             new Container(
-                              padding: EdgeInsets.all(2.0),
-                              child: new Text("5"),
+                              padding: EdgeInsets.all(4.0),
+                              child: new Text(
+                                "5",
+                                style: new TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 25,
+                                ),
+                              ),
                             ),
                             new Container(
                               padding: EdgeInsets.all(2.0),
-                              child: new Text("data"),
+                              child: new Image.asset(
+                                "assets/images/medal.png",
+                                height: 60,
+                                width: 60,
+                              ),
                             )
                           ],
                         ),
@@ -66,11 +76,21 @@ class _TrophyRoomPageState extends State<TrophyRoomPage> {
                           children: <Widget>[
                             new Container(
                               padding: EdgeInsets.all(2.0),
-                              child: new Text("3"),
+                              child: new Text(
+                                "5",
+                                style: new TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 25,
+                                ),
+                              ),
                             ),
                             new Container(
                               padding: EdgeInsets.all(2.0),
-                              child: new Text("data"),
+                              child: new Image.asset(
+                                "assets/images/trophy.png",
+                                height: 60,
+                                width: 60,
+                              ),
                             ),
                           ],
                         ),
@@ -98,11 +118,21 @@ class _TrophyRoomPageState extends State<TrophyRoomPage> {
                               children: <Widget>[
                                 new Container(
                                   padding: EdgeInsets.all(2.0),
-                                  child: new Text("5"),
+                                  child: new Text(
+                                    "5",
+                                    style: new TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 25,
+                                    ),
+                                  ),
                                 ),
                                 new Container(
                                   padding: EdgeInsets.all(2.0),
-                                  child: new Text("data"),
+                                  child: new Image.asset(
+                                    "assets/images/medal.png",
+                                    height: 60,
+                                    width: 60,
+                                  ),
                                 )
                               ],
                             ),
@@ -112,11 +142,20 @@ class _TrophyRoomPageState extends State<TrophyRoomPage> {
                               children: <Widget>[
                                 new Container(
                                   padding: EdgeInsets.all(2.0),
-                                  child: new Text("3"),
+                                  child: new Text(
+                                    "5",
+                                    style: new TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 25,
+                                    ),
+                                  ),
                                 ),
                                 new Container(
                                   padding: EdgeInsets.all(2.0),
-                                  child: new Text("data"),
+                                  child: new Image.asset(
+                                      "assets/images/trophy.png",
+                                      height: 60,
+                                      width: 60),
                                 ),
                               ],
                             ),
@@ -144,11 +183,21 @@ class _TrophyRoomPageState extends State<TrophyRoomPage> {
                                     children: <Widget>[
                                       new Container(
                                         padding: EdgeInsets.all(2.0),
-                                        child: new Text("5"),
+                                        child: new Text(
+                                          "5",
+                                          style: new TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 25,
+                                          ),
+                                        ),
                                       ),
                                       new Container(
                                         padding: EdgeInsets.all(2.0),
-                                        child: new Text("data"),
+                                        child: new Image.asset(
+                                          "assets/images/medal.png",
+                                          height: 60,
+                                          width: 60,
+                                        ),
                                       )
                                     ],
                                   ),
@@ -158,11 +207,21 @@ class _TrophyRoomPageState extends State<TrophyRoomPage> {
                                     children: <Widget>[
                                       new Container(
                                         padding: EdgeInsets.all(2.0),
-                                        child: new Text("3"),
+                                        child: new Text(
+                                          "5",
+                                          style: new TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 25,
+                                          ),
+                                        ),
                                       ),
                                       new Container(
                                         padding: EdgeInsets.all(2.0),
-                                        child: new Text("data"),
+                                        child: new Image.asset(
+                                          "assets/images/trophy.png",
+                                          height: 60,
+                                          width: 60,
+                                        ),
                                       ),
                                     ],
                                   ),
