@@ -35,7 +35,6 @@ class _TrophyRoomPageState extends State<TrophyRoomPage> {
             child: new Stack(
           children: <Widget>[
             new Container(
-              //color: Colors.redAccent,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
