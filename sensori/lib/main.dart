@@ -7,7 +7,7 @@ import 'package:sensori/pages/trophyRoomPage.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: TrophyRoomPage(title: "Trophy Room",),
+    home: GamesPage(title: "Trophy Room",),
     theme: sensoriTheme,
   ));
 }
