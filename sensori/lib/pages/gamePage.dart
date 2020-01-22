@@ -1,28 +1,43 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_unity_widget/flutter_unity_widget.dart';
 
-class GamesPage extends StatelessWidget {
-  GamesPage({Key key, this.title}) : super(key: key);
+class UnityDemoScreen extends StatefulWidget {
 
-  final String title;
+  UnityDemoScreen({Key key}) : super(key: key);
 
-   @override
+  @override
+  _UnityDemoScreenState createState() => _UnityDemoScreenState();
+}
+
+class _UnityDemoScreenState extends State<UnityDemoScreen>{
+  static final GlobalKey<ScaffoldState> _scaffoldKey =
+      GlobalKey<ScaffoldState>();
+  UnityWidgetController _unityWidgetController;
+
   Widget build(BuildContext context) {
-    return new Scaffold(
-        appBar: new AppBar(
-            centerTitle: true,
-            leading: new IconButton(
-              icon: Icon(Icons.menu),
-              tooltip: 'Navigation menun',
-              onPressed: null,
+
+    return Scaffold(
+      key: _scaffoldKey,
+      body: SafeArea(
+        bottom: false,
+        child: WillPopScope(
+          onWillPop: () {
+            // Pop the category page if Android back button is pressed.
+          },
+          child: Container(
+            color: colorYellow,
+            child: UnityWidget(
+              onUnityViewCreated: onUnityCreated,
             ),
-            title: new Text('Games'),
-            actions: <Widget>[
-              new IconButton(
-                icon: Icon(Icons.search),
-                tooltip: 'Search',
-                onPressed: null,
-              )
-            ]),
+          ),
+        ),
+      ),
     );
-}
-}
+  }
+
+  // Callback that connects the created controller to the unity controller
+  void onUnityCreated(controller) {
+    this._unityWidgetController = controller;
+  }
+}*/
