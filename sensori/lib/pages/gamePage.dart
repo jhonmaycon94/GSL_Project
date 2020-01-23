@@ -1,6 +1,6 @@
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_unity_widget/flutter_unity_widget.dart';
+//import 'package:flutter_unity_widget/flutter_unity_widget.dart';
 
 class UnityDemoScreen extends StatefulWidget {
 
@@ -13,7 +13,7 @@ class UnityDemoScreen extends StatefulWidget {
 class _UnityDemoScreenState extends State<UnityDemoScreen>{
   static final GlobalKey<ScaffoldState> _scaffoldKey =
       GlobalKey<ScaffoldState>();
-  UnityWidgetController _unityWidgetController;
+ // UnityWidgetController _unityWidgetController;
 
   Widget build(BuildContext context) {
 
@@ -26,18 +26,13 @@ class _UnityDemoScreenState extends State<UnityDemoScreen>{
             // Pop the category page if Android back button is pressed.
           },
           child: Container(
-            color: colorYellow,
-            child: UnityWidget(
-              onUnityViewCreated: onUnityCreated,
-            ),
+   //         color: colorYellow,
+   //         child: UnityWidget(
+   //           onUnityViewCreated: onUnityCreated,
+    //        ),
           ),
         ),
       ),
     );
   }
-
-  // Callback that connects the created controller to the unity controller
-  void onUnityCreated(controller) {
-    this._unityWidgetController = controller;
-  }
-}*/
+}
