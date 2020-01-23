@@ -20,11 +20,12 @@ class EquationPuzzlePage extends StatelessWidget {
       appBar: new AppBar(
         centerTitle: true,
         leading: new IconButton(
-          icon: Icon(Icons.menu),
+          icon: Icon(Icons.arrow_back),
           tooltip: 'Navigation menu',
           onPressed: null,
         ),
-        title: new Text('Equation Puzzle'),
+        title: new Text('Equation Puzzle',
+        style: Theme.of(context).textTheme.title,),
         actions: <Widget>[
           new IconButton(
             icon: Icon(Icons.account_circle),
@@ -39,7 +40,10 @@ class EquationPuzzlePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           new Container(
-            child: new Text("How to play"),
+            child: new Text("How to play",
+            style: new TextStyle(
+              fontSize: 30
+            )),
           ),
           new Container(
             margin: EdgeInsets.only(bottom: 20),

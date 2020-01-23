@@ -1,38 +1,48 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-//import 'package:flutter_unity_widget/flutter_unity_widget.dart';
+import 'package:sensori/pages/trophyRoomPage.dart';
 
-class UnityDemoScreen extends StatefulWidget {
+class GamePage extends StatefulWidget {
+  GamePage({Key key, this.title}) : super(key: key);
 
-  UnityDemoScreen({Key key}) : super(key: key);
+  final String title;
 
   @override
-  _UnityDemoScreenState createState() => _UnityDemoScreenState();
+  _GamePageState createState() => _GamePageState();
 }
 
-class _UnityDemoScreenState extends State<UnityDemoScreen>{
-  static final GlobalKey<ScaffoldState> _scaffoldKey =
-      GlobalKey<ScaffoldState>();
- // UnityWidgetController _unityWidgetController;
-
+class _GamePageState extends State<GamePage> {
+  
+  @override
   Widget build(BuildContext context) {
-
-    return Scaffold(
-      key: _scaffoldKey,
-      body: SafeArea(
-        bottom: false,
-        child: WillPopScope(
-          onWillPop: () {
-            // Pop the category page if Android back button is pressed.
-          },
-          child: Container(
-   //         color: colorYellow,
-   //         child: UnityWidget(
-   //           onUnityViewCreated: onUnityCreated,
-    //        ),
+    // Scaffold is a layout for the major Material Components.
+    return new Scaffold(
+        appBar: new AppBar(
+          centerTitle: true,
+          leading: new IconButton(
+            icon: Icon(Icons.arrow_back),
+            tooltip: 'back',
+            onPressed: () => {
+              Navigator.pop(context)
+            },
           ),
+          title: new Text('Equation Puzzle',
+          style: Theme.of(context).textTheme.title,),
+          actions: <Widget>[
+            new IconButton(
+              icon: Icon(Icons.account_circle),
+              tooltip: 'Trophy Room',
+              onPressed: () => {
+                Navigator.push(context, 
+                MaterialPageRoute(
+                  builder: (context) => TrophyRoomPage(title: "Trophy")
+                ))
+              },
+            ),
+          ],
         ),
-      ),
-    );
+        // body is the majority of the screen.
+        body: new Container(
+          
+        ));
   }
 }

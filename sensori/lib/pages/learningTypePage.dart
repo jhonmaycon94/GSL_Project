@@ -29,7 +29,8 @@ class _LearningTypePageState extends State<LearningTypePage> {
                 tooltip: 'Navigation menu',
                 onPressed: null,
               ),
-              title: new Text('Learning Types'),
+              title: new Text('Learning Types',
+              style: Theme.of(context).textTheme.title,),
               actions: <Widget>[
                 new IconButton(
                   icon: Icon(Icons.account_circle),

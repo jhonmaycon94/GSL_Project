@@ -41,11 +41,12 @@ class _LoginPageState extends State<LoginPage> {
             tooltip: 'Navigation menu',
             onPressed: null,
           ),
-          title: new Text('Sensori'),
+          title: new Text('Sensori',
+          style: Theme.of(context).textTheme.title,),
           actions: <Widget>[
             new IconButton(
-              icon: Icon(Icons.search),
-              tooltip: 'Search',
+              icon: Icon(Icons.account_circle),
+              tooltip: 'Trophy Room',
               onPressed: null,
             ),
           ],

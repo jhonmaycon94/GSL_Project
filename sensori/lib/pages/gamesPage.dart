@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sensori/pages/gamePage.dart';
 import 'package:sensori/pages/trophyRoomPage.dart';
+import 'package:sensori/pages/mathGamesPage.dart';
 
 class GamesPage extends StatelessWidget {
   GamesPage({Key key, this.title}) : super(key: key);
@@ -43,10 +43,8 @@ class GamesPage extends StatelessWidget {
                     ),
                     fit: BoxFit.cover)),
           ),
-          Align(
-            alignment: Alignment.topCenter,
-            child: new Container(
-              color: Colors.yellow,
+          new Container(
+            padding: EdgeInsets.only(left: 80.0, top: 50.0),
               constraints: BoxConstraints(
                 maxWidth: MediaQuery.of(context).size.width,
                 maxHeight: 200.0,
@@ -60,13 +58,12 @@ class GamesPage extends StatelessWidget {
                           color: Colors.purple,
                           offset: Offset(3.0, 3.0)),
                     ],
-                    color: Colors.yellow,
+                    color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: 40,
                     fontFamily: "SeymourOne"),
               ),
             ),
-          ),
           new Center(
             child: new Stack(children: <Widget>[
               new Container(
@@ -78,6 +75,7 @@ class GamesPage extends StatelessWidget {
                 child: Column(
                   children: <Widget>[
                     new FloatingActionButton(
+                      heroTag: "planet1",
                       child: Image.asset("assets/images/planet1.png"),
                       elevation: 0,
                       onPressed: () => {},
@@ -96,6 +94,7 @@ class GamesPage extends StatelessWidget {
                 child: Column(
                   children: <Widget>[
                     new FloatingActionButton(
+                      heroTag: "planet2",
                       child: Image.asset("assets/images/planet2.png"),
                       elevation: 0,
                       onPressed: () => {},
@@ -114,6 +113,7 @@ class GamesPage extends StatelessWidget {
                 child: new Column(
                   children: <Widget>[
                     new FloatingActionButton(
+                      heroTag: "planet3",
                       child: Image.asset("assets/images/planet3.png"),
                       elevation: 0,
                       onPressed: () => {},
@@ -132,6 +132,7 @@ class GamesPage extends StatelessWidget {
                 child: new Column(
                   children: <Widget>[
                     new FloatingActionButton(
+                      heroTag: "planet4",
                       child: Image.asset("assets/images/planet4.png"),
                       elevation: 0,
                       onPressed: () => {},
@@ -150,6 +151,7 @@ class GamesPage extends StatelessWidget {
                 child: new Column(
                   children: <Widget>[
                     new FloatingActionButton(
+                      heroTag: "planet5",
                       child: Image.asset("assets/images/planet5.png"),
                       elevation: 0,
                       onPressed: () => {},
@@ -168,6 +170,7 @@ class GamesPage extends StatelessWidget {
                 child: new Column(
                   children: <Widget>[
                     new FloatingActionButton(
+                      heroTag: "history",
                       child: Image.asset("assets/images/moon.png"),
                       elevation: 0,
                       onPressed: () => {},
@@ -196,7 +199,7 @@ class GamesPage extends StatelessWidget {
                           Navigator.push(
                             context, 
                             MaterialPageRoute(
-                              builder: (context) => UnityDemoScreen())
+                              builder: (context) => MathGamesPage())
                               )
                         },
                       ),

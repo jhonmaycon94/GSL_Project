@@ -18,15 +18,18 @@ class _TrophyRoomPageState extends State<TrophyRoomPage> {
         appBar: new AppBar(
           centerTitle: true,
           leading: new IconButton(
-            icon: Icon(Icons.menu),
-            tooltip: 'Navigation menu',
-            onPressed: null,
+            icon: Icon(Icons.arrow_back),
+            tooltip: 'back',
+            onPressed: () => {
+              Navigator.pop(context)
+            },
           ),
-          title: new Text('Trophy Room'),
+          title: new Text('Trophy Room',
+          style: Theme.of(context).textTheme.title,),
           actions: <Widget>[
             new IconButton(
-              icon: Icon(Icons.search),
-              tooltip: 'Search',
+              icon: Icon(Icons.account_circle),
+              tooltip: 'Trophy Room',
               onPressed: null,
             ),
           ],
