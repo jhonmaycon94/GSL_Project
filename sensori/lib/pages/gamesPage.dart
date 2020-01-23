@@ -24,7 +24,6 @@ class GamesPage extends StatelessWidget {
             )
           ]),
       body: new Stack(
-        alignment: Alignment.center,
         children: <Widget>[
           new Container(
             decoration: BoxDecoration(
@@ -34,6 +33,21 @@ class GamesPage extends StatelessWidget {
                     ),
                     fit: BoxFit.cover)),
           ),
+          new Container(
+            margin: EdgeInsets.only(top: 60.0, bottom: 30.0, left: 20.0),
+            padding: EdgeInsets.all(6),
+                child: new Text("Pick the subject!",
+                style: TextStyle(
+                  shadows: [Shadow(
+                    blurRadius: 2.0,
+                    color: Colors.purple,
+                    offset: Offset(3.0, 3.0)),
+                  ],        
+                  color: Colors.yellow,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 45
+                ),),
+              ),
           new Center(
               child: new Stack(
             children: <Widget>[
@@ -52,11 +66,13 @@ class GamesPage extends StatelessWidget {
                 left: 100.0,
               ),
               new Positioned(
-                child: new Text("Geo",
+                child: new Text("Arts",
                 style: new TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.white
                 ),),
+                top: 80.0,
+                left: 110.0,
               ),
               new Positioned(
                 child: new FloatingActionButton(
@@ -68,11 +84,13 @@ class GamesPage extends StatelessWidget {
                 left: 10.0,
               ),
               new Positioned(
-                child: new Text("Geo",
+                child: new Text("science",
                 style: new TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.white
                 ),),
+                top: 220.0,
+                left: 330.0,
               ),
               new Positioned(
                 child: new FloatingActionButton(
@@ -84,11 +102,13 @@ class GamesPage extends StatelessWidget {
                 right: 10.0,
               ),
               new Positioned(
-                child: new Text("Geo",
+                child: new Text("English",
                 style: new TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.white
                 ),),
+                top: 218.0,
+                left: 15.0,
               ),
               new Positioned(
                 child: new FloatingActionButton(
@@ -100,11 +120,13 @@ class GamesPage extends StatelessWidget {
                 left: 230.0,
               ),
               new Positioned(
-                child: new Text("Geo",
+                child: new Text("Portuguese",
                 style: new TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.white
                 ),),
+                top: 385.0,
+                left: 225.0,
               ),
               new Positioned(
                 child: new FloatingActionButton(
@@ -121,6 +143,8 @@ class GamesPage extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   color: Colors.white
                 ),),
+                top: 90.0,
+                left: 265.0,
               ),
               new Positioned(
                 child: new FloatingActionButton(
@@ -132,11 +156,13 @@ class GamesPage extends StatelessWidget {
                 left: 80.0,
               ),
               new Positioned(
-                child: new Text("Geo",
+                child: new Text("History",
                 style: new TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.white
                 ),),
+                top: 370.0,
+                left: 85.0,
               ),
                 new Positioned(
                   child: new Container(
