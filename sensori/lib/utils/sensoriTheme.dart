@@ -9,7 +9,7 @@ final ThemeData sensoriTheme = new ThemeData(
       textTheme: TextTheme(
         title: TextStyle(
           fontFamily: 'Orbitron',
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.w900,
           color: Colors.white
         ),
         body1: TextStyle(
