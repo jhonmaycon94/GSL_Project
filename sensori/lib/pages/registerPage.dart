@@ -33,9 +33,11 @@ class _RegisterPageState extends State<RegisterPage> {
         appBar: new AppBar(
             centerTitle: true,
             leading: new IconButton(
-              icon: Icon(Icons.menu),
-              tooltip: 'Navigation menun',
-              onPressed: null,
+              icon: Icon(Icons.arrow_back),
+              tooltip: 'back',
+              onPressed: () => {
+                Navigator.pop(context)
+              },
             ),
             title: new Text('Register'),
             actions: <Widget>[

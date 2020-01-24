@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sensori/pages/trophyRoomPage.dart';
+import 'package:sensori/pages/mathGamesPage.dart';
 
 class GamesPage extends StatelessWidget {
   GamesPage({Key key, this.title}) : super(key: key);
@@ -8,19 +10,48 @@ class GamesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      drawer: Drawer(
+        child: Container(
+          color: Colors.purple,
+          child: Column(
+            children: <Widget>[
+              new Container(
+                child: Image.asset("logo.png"),
+              ),
+              new Container(
+                child: new Text(
+                  "Login",
+                ),
+              ),
+                new Container(
+                  decoration: BoxConstraints(
+                    
+                  ),
+                child: new Text("Register"),  
+              ),
+              new Container(
+                child: new Text("Learning Types Test"),  
+              ),
+            ],
+          ),),
+      ),
       appBar: new AppBar(
           centerTitle: true,
-          leading: new IconButton(
-            icon: Icon(Icons.menu),
-            tooltip: 'Navigation menun',
-            onPressed: null,
+        
+          title: new Text(
+            'Games',
+            style: Theme.of(context).textTheme.title,
           ),
-          title: new Text('Games'),
           actions: <Widget>[
             new IconButton(
-              icon: Icon(Icons.search),
-              tooltip: 'Search',
-              onPressed: null,
+              icon: Icon(Icons.account_circle),
+              tooltip: 'Trophy Room',
+              onPressed: () => {
+                Navigator.push(context, 
+                MaterialPageRoute(
+                  builder: (context) => TrophyRoomPage(title: "Trophy")
+                ))
+              },
             )
           ]),
       body: new Stack(
@@ -34,161 +65,178 @@ class GamesPage extends StatelessWidget {
                     fit: BoxFit.cover)),
           ),
           new Container(
-            margin: EdgeInsets.only(top: 60.0, bottom: 30.0, left: 20.0),
-            padding: EdgeInsets.all(6),
-                child: new Text("Pick the subject!",
-                style: TextStyle(
-                  shadows: [Shadow(
-                    blurRadius: 2.0,
-                    color: Colors.purple,
-                    offset: Offset(3.0, 3.0)),
-                  ],        
-                  color: Colors.yellow,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 45
-                ),),
+            padding: EdgeInsets.only(left: 80.0, top: 50.0),
+              constraints: BoxConstraints(
+                maxWidth: MediaQuery.of(context).size.width,
+                maxHeight: 200.0,
               ),
+              child: new Text(
+                "Pick the subject!",
+                style: TextStyle(
+                    shadows: [
+                      Shadow(
+                          blurRadius: 2.0,
+                          color: Colors.purple,
+                          offset: Offset(3.0, 3.0)),
+                    ],
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 40,
+                    fontFamily: "SeymourOne"),
+              ),
+            ),
           new Center(
-              child: new Stack(
-            children: <Widget>[
+            child: new Stack(children: <Widget>[
               new Container(
                 width: 400.0,
                 height: 400.0,
                 decoration: new BoxDecoration(),
               ),
               new Positioned(
-                child: new FloatingActionButton(
-                  child: Image.asset("assets/images/planet1.png"),
-                  elevation: 0,
-                  onPressed: () => {},
+                child: Column(
+                  children: <Widget>[
+                    new FloatingActionButton(
+                      heroTag: "planet1",
+                      child: Image.asset("assets/images/planet1.png"),
+                      elevation: 0,
+                      onPressed: () => {},
+                    ),
+                    new Text(
+                      "Arts",
+                      style: new TextStyle(
+                          fontWeight: FontWeight.bold, color: Colors.white),
+                    ),
+                  ],
                 ),
                 top: 20.0,
                 left: 100.0,
               ),
               new Positioned(
-                child: new Text("Arts",
-                style: new TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white
-                ),),
-                top: 80.0,
-                left: 110.0,
-              ),
-              new Positioned(
-                child: new FloatingActionButton(
-                  child: Image.asset("assets/images/planet2.png"),
-                  elevation: 0,
-                  onPressed: () => {},
+                child: Column(
+                  children: <Widget>[
+                    new FloatingActionButton(
+                      heroTag: "planet2",
+                      child: Image.asset("assets/images/planet2.png"),
+                      elevation: 0,
+                      onPressed: () => {},
+                    ),
+                    new Text(
+                      "science",
+                      style: new TextStyle(
+                          fontWeight: FontWeight.bold, color: Colors.white),
+                    ),
+                  ],
                 ),
                 top: 160.0,
                 left: 10.0,
               ),
               new Positioned(
-                child: new Text("science",
-                style: new TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white
-                ),),
-                top: 220.0,
-                left: 330.0,
-              ),
-              new Positioned(
-                child: new FloatingActionButton(
-                  child: Image.asset("assets/images/planet3.png"),
-                  elevation: 0,
-                  onPressed: () => {},
+                child: new Column(
+                  children: <Widget>[
+                    new FloatingActionButton(
+                      heroTag: "planet3",
+                      child: Image.asset("assets/images/planet3.png"),
+                      elevation: 0,
+                      onPressed: () => {},
+                    ),
+                    new Text(
+                      "English",
+                      style: new TextStyle(
+                          fontWeight: FontWeight.bold, color: Colors.white),
+                    ),
+                  ],
                 ),
                 top: 160.0,
                 right: 10.0,
               ),
               new Positioned(
-                child: new Text("English",
-                style: new TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white
-                ),),
-                top: 218.0,
-                left: 15.0,
-              ),
-              new Positioned(
-                child: new FloatingActionButton(
-                  child: Image.asset("assets/images/planet4.png"),
-                  elevation: 0,
-                  onPressed: () => {},
+                child: new Column(
+                  children: <Widget>[
+                    new FloatingActionButton(
+                      heroTag: "planet4",
+                      child: Image.asset("assets/images/planet4.png"),
+                      elevation: 0,
+                      onPressed: () => {},
+                    ),
+                    new Text(
+                      "Portuguese",
+                      style: new TextStyle(
+                          fontWeight: FontWeight.bold, color: Colors.white),
+                    ),
+                  ],
                 ),
                 top: 325.0,
                 left: 230.0,
               ),
               new Positioned(
-                child: new Text("Portuguese",
-                style: new TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white
-                ),),
-                top: 385.0,
-                left: 225.0,
-              ),
-              new Positioned(
-                child: new FloatingActionButton(
-                  child: Image.asset("assets/images/planet5.png"),
-                  elevation: 0,
-                  onPressed: () => {},
+                child: new Column(
+                  children: <Widget>[
+                    new FloatingActionButton(
+                      heroTag: "planet5",
+                      child: Image.asset("assets/images/planet5.png"),
+                      elevation: 0,
+                      onPressed: () => {},
+                    ),
+                    new Text(
+                      "Geo",
+                      style: new TextStyle(
+                          fontWeight: FontWeight.bold, color: Colors.white),
+                    ),
+                  ],
                 ),
                 top: 30.0,
                 left: 250.0,
               ),
               new Positioned(
-                child: new Text("Geo",
-                style: new TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white
-                ),),
-                top: 90.0,
-                left: 265.0,
-              ),
-              new Positioned(
-                child: new FloatingActionButton(
-                  child: Image.asset("assets/images/moon.png"),
-                  elevation: 0,
-                  onPressed: () => {},
+                child: new Column(
+                  children: <Widget>[
+                    new FloatingActionButton(
+                      heroTag: "history",
+                      child: Image.asset("assets/images/moon.png"),
+                      elevation: 0,
+                      onPressed: () => {},
+                    ),
+                    new Text(
+                      "History",
+                      style: new TextStyle(
+                          fontWeight: FontWeight.bold, color: Colors.white),
+                    ),
+                  ],
                 ),
                 top: 310.0,
                 left: 80.0,
               ),
               new Positioned(
-                child: new Text("History",
-                style: new TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white
-                ),),
-                top: 370.0,
-                left: 85.0,
-              ),
-                new Positioned(
-                  child: new Container(
-                    width: 140.0,
-                    height: 140.0,
-                    child: new RawMaterialButton(
-                      child: Image.asset("assets/images/sun.png"),
-                      shape: new CircleBorder(),
-                      elevation: 0,
-                      onPressed: () => {},
+                child: new Column(
+                  children: <Widget>[
+                    new Container(
+                      width: 140.0,
+                      height: 140.0,
+                      child: new RawMaterialButton(
+                        child: Image.asset("assets/images/sun.png"),
+                        shape: new CircleBorder(),
+                        elevation: 0,
+                        onPressed: () => {
+                          Navigator.push(
+                            context, 
+                            MaterialPageRoute(
+                              builder: (context) => MathGamesPage())
+                              )
+                        },
+                      ),
                     ),
-                  ),
-                  top: 130.0,
-                  left: 130.0,
+                    new Text(
+                      "Math",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, color: Colors.white),
+                    ),
+                  ],
                 ),
-                new Positioned(
-                  top: 270,
-                  left: 180,
-                  child: new Text(
-                    "Math",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold, color: Colors.white),
-                  ),
-                ),
+                top: 130.0,
+                left: 130.0,
+              ),
             ]),
-        ),
+          ),
         ],
       ),
     );
