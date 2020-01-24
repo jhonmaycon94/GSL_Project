@@ -8,16 +8,16 @@ public class Tile : MonoBehaviour
     private bool clockwise = true;
     public string value_name = "0";
     public int value_num = 0;
-    float current_time = Time.time;
-    
+    float current_time = 0;
 
 
-    Material newmat = Resources.Load("Active", typeof(Material)) as Material;
+
+    Material newmat;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        newmat = Resources.Load("Active", typeof(Material)) as Material;
     }
 
     // Update is called once per frame
