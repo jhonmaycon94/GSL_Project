@@ -13,10 +13,20 @@ final ThemeData sensoriTheme = new ThemeData(
           color: Colors.white
         ),
         body1: TextStyle(
+          color: Colors.white,
           fontFamily: 'SeymourOne',
           fontWeight: FontWeight.bold,
         ),
-        
+        body2: TextStyle(
+          fontFamily: 'SeymourOne',
+          fontWeight: FontWeight.bold,
+        ),
+        button: TextStyle(
+          fontFamily: 'SeymourOne',
+          fontWeight: FontWeight.bold,
+        )
+
+
         )
     );
 

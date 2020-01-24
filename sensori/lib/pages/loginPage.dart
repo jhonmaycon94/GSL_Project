@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sensori/pages/registerPage.dart';
 
 class LoginPage extends StatefulWidget {
-  LoginPage({Key key, this.title}) : super(key: key);
+  LoginPage(String s, {Key key, this.title}) : super(key: key);
 
   final String title;
 
@@ -27,7 +27,7 @@ class _LoginPageState extends State<LoginPage> {
 
   register() {
     Navigator.push(
-      context, MaterialPageRoute(builder: (context) => RegisterPage())
+      context, MaterialPageRoute(builder: (context) => RegisterPage("Register"))
     );
   }
   @override
@@ -62,6 +62,10 @@ class _LoginPageState extends State<LoginPage> {
               new Row(
                 children: <Widget>[
                   new Container(
+                    constraints: BoxConstraints(
+                      maxHeight: 350,
+                      maxWidth: 350,
+                    ),
                     padding: EdgeInsets.only(top: 40.0, left: 40.0, right: 40.0,),
                     child: new Image.asset('assets/images/logo.png'),
                     )

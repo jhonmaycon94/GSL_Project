@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:sensori/pages/registerPage.dart';
 import 'package:sensori/pages/trophyRoomPage.dart';
 import 'package:sensori/pages/mathGamesPage.dart';
+
+import 'learningTypePage.dart';
+import 'loginPage.dart';
 
 class GamesPage extends StatelessWidget {
   GamesPage({Key key, this.title}) : super(key: key);
@@ -9,45 +13,101 @@ class GamesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return new Scaffold(
       drawer: Drawer(
-        child: Container(
-          color: Colors.purple,
-          child: Column(
-            children: <Widget>[
-              new Container(
-                child: Image.asset("logo.png"),
-              ),
-              new Container(
-                child: new Row(
-                  children: <Widget>[
-                    new Text(
-                  "Login",
-                ),
-                  ],
-                )
-              ),
-                new Container(
-                  child: new Row(
-                    children: <Widget>[
-                      new Text(
-                        "Register"
-                      )
-                    ],
-                  ), 
-              ),
-              new Row(
+          child: Container(
+        padding: EdgeInsets.only(top: height * 0.05),
+        color: Colors.purple,
+        child: Column(
+          children: <Widget>[
+            new Container(
+              constraints: BoxConstraints(
+                  minWidth: MediaQuery.of(context).size.width,
+                  maxWidth: MediaQuery.of(context).size.width,
+                  maxHeight: 180),
+              padding: EdgeInsets.all(height * 0.02),
+              margin: EdgeInsets.only(bottom: height * 0.04),
+              child: Image.asset("assets/images/logo.png"),
+            ),
+            new Container(
+              child: new Column(
                 children: <Widget>[
-                   new Text("Learning Types Test"), 
+                  new GestureDetector(
+                      onTap: () => {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => LoginPage("Login")))
+                          },
+                      child: new Container(
+                          decoration: BoxDecoration(
+                        boxShadow: [BoxShadow(
+                          blurRadius: 5.0,
+                          color: Colors.purple,
+                          offset: Offset(-1.0, -1.0)
+                        )],
+                      ),
+                          padding: EdgeInsets.all(height * 0.03),
+                          child: new Row(
+                            children: <Widget>[
+                              new Text(
+                                "Login",
+                              ),
+                            ],
+                          ))),
+                  new GestureDetector(
+                      onTap: () => {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        RegisterPage("Register")))
+                          },
+                      child: new Container(
+                        decoration: BoxDecoration(
+                        boxShadow: [BoxShadow(
+                          blurRadius: 5.0,
+                          color: Colors.purple,
+                          offset: Offset(-1.0, -1.0)
+                        )],
+                      ),
+                        padding: EdgeInsets.all(height * 0.03),
+                        child: new Row(
+                          children: <Widget>[new Text("Register")],
+                        ),
+                      )),
+                  new GestureDetector(
+                    onTap: () => {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => LearningTypePage()))
+                    },
+                    child: new Container(
+                      decoration: BoxDecoration(
+                        color: Colors.purple,
+                        boxShadow: [BoxShadow(
+                          blurRadius: 5.0,
+                          offset: Offset(-1.0, -1.0)
+                        )],
+                      ),
+                        padding: EdgeInsets.all(height * 0.03),
+                        child: new Row(
+                          children: <Widget>[
+                            new Text("Learning Types Test"),
+                          ],
+                        )),
+                  ),
                 ],
-              ) 
               ),
-            ],
-          ),),
-      ),
+            ),
+          ],
+        ),
+      )),
       appBar: new AppBar(
           centerTitle: true,
-        
           title: new Text(
             'Games',
             style: Theme.of(context).textTheme.title,
@@ -57,10 +117,10 @@ class GamesPage extends StatelessWidget {
               icon: Icon(Icons.account_circle),
               tooltip: 'Trophy Room',
               onPressed: () => {
-                Navigator.push(context, 
-                MaterialPageRoute(
-                  builder: (context) => TrophyRoomPage(title: "Trophy")
-                ))
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => TrophyRoomPage(title: "Trophy")))
               },
             )
           ]),
@@ -76,25 +136,25 @@ class GamesPage extends StatelessWidget {
           ),
           new Container(
             padding: EdgeInsets.only(left: 80.0, top: 50.0),
-              constraints: BoxConstraints(
-                maxWidth: MediaQuery.of(context).size.width,
-                maxHeight: 200.0,
-              ),
-              child: new Text(
-                "Pick the subject!",
-                style: TextStyle(
-                    shadows: [
-                      Shadow(
-                          blurRadius: 2.0,
-                          color: Colors.purple,
-                          offset: Offset(3.0, 3.0)),
-                    ],
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 40,
-                    fontFamily: "SeymourOne"),
-              ),
+            constraints: BoxConstraints(
+              maxWidth: MediaQuery.of(context).size.width,
+              maxHeight: 200.0,
             ),
+            child: new Text(
+              "Pick the subject!",
+              style: TextStyle(
+                  shadows: [
+                    Shadow(
+                        blurRadius: 2.0,
+                        color: Colors.purple,
+                        offset: Offset(3.0, 3.0)),
+                  ],
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 40,
+                  fontFamily: "SeymourOne"),
+            ),
+          ),
           new Center(
             child: new Stack(children: <Widget>[
               new Container(
@@ -228,10 +288,9 @@ class GamesPage extends StatelessWidget {
                         elevation: 0,
                         onPressed: () => {
                           Navigator.push(
-                            context, 
-                            MaterialPageRoute(
-                              builder: (context) => MathGamesPage())
-                              )
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => MathGamesPage()))
                         },
                       ),
                     ),
