@@ -10,13 +10,34 @@ class GamesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      drawer: Drawer(
+        child: Container(
+          color: Colors.purple,
+          child: Column(
+            children: <Widget>[
+              new Container(
+                child: Image.asset("logo.png"),
+              ),
+              new Container(
+                child: new Text(
+                  "Login",
+                ),
+              ),
+                new Container(
+                  decoration: BoxConstraints(
+                    
+                  ),
+                child: new Text("Register"),  
+              ),
+              new Container(
+                child: new Text("Learning Types Test"),  
+              ),
+            ],
+          ),),
+      ),
       appBar: new AppBar(
           centerTitle: true,
-          leading: new IconButton(
-            icon: Icon(Icons.menu),
-            tooltip: 'Navigation menun',
-            onPressed: null,
-          ),
+        
           title: new Text(
             'Games',
             style: Theme.of(context).textTheme.title,

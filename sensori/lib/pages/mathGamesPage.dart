@@ -40,9 +40,7 @@ class _MathGamesPageState extends State<MathGamesPage> {
           ],
         ),
         // body is the majority of the screen.
-        body: new Stack(
-          children: <Widget>[
-            new Container(
+        body: new Container(
           decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage("assets/images/starry-background.jpg"),
@@ -227,8 +225,6 @@ class _MathGamesPageState extends State<MathGamesPage> {
                 ),
             ],),
           ),
-          ],
-        ),
         );
   }
 }

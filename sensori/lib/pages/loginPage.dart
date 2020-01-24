@@ -37,11 +37,13 @@ class _LoginPageState extends State<LoginPage> {
         appBar: new AppBar(
           centerTitle: true,
           leading: new IconButton(
-            icon: Icon(Icons.menu),
-            tooltip: 'Navigation menu',
-            onPressed: null,
+            icon: Icon(Icons.arrow_back),
+            tooltip: 'back',
+            onPressed: () => {
+              Navigator.pop(context)
+            },
           ),
-          title: new Text('Sensori',
+          title: new Text('Login',
           style: Theme.of(context).textTheme.title,),
           actions: <Widget>[
             new IconButton(
