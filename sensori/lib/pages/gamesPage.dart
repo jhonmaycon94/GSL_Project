@@ -19,18 +19,28 @@ class GamesPage extends StatelessWidget {
                 child: Image.asset("logo.png"),
               ),
               new Container(
-                child: new Text(
+                child: new Row(
+                  children: <Widget>[
+                    new Text(
                   "Login",
                 ),
+                  ],
+                )
               ),
                 new Container(
-                  decoration: BoxConstraints(
-                    
-                  ),
-                child: new Text("Register"),  
+                  child: new Row(
+                    children: <Widget>[
+                      new Text(
+                        "Register"
+                      )
+                    ],
+                  ), 
               ),
-              new Container(
-                child: new Text("Learning Types Test"),  
+              new Row(
+                children: <Widget>[
+                   new Text("Learning Types Test"), 
+                ],
+              ) 
               ),
             ],
           ),),
