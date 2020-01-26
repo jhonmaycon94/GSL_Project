@@ -58,7 +58,6 @@ class _TrophyRoomPageState extends State<TrophyRoomPage> {
                             child: new Container(
                               decoration: new BoxDecoration(
                             borderRadius: new BorderRadius.circular(5.0),
-                            color: Color.fromARGB(255, 255, 237, 13),
                           ),
                               child: new Row(
                         mainAxisAlignment: MainAxisAlignment.end,
@@ -67,7 +66,7 @@ class _TrophyRoomPageState extends State<TrophyRoomPage> {
                             child: new Row(
                               children: <Widget>[
                                 new Container(
-                                  padding: EdgeInsets.all(4.0),
+                                  margin: EdgeInsets.all(25.0),
                                   child: new Text(
                                     "5",
                                     style: new TextStyle(

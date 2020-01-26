@@ -19,7 +19,7 @@ class GamesPage extends StatelessWidget {
       drawer: Drawer(
           child: Container(
         padding: EdgeInsets.only(top: height * 0.05),
-        color: Colors.purple,
+        color: Color.fromARGB(255, 120,19,235),
         child: Column(
           children: <Widget>[
             new Container(
@@ -31,6 +31,7 @@ class GamesPage extends StatelessWidget {
                             border: Border(
                               bottom: BorderSide(
                                 width: 1.0,
+                                color: Color.fromARGB(100, 0, 0, 0),
                               )
                             )
                           ),
@@ -53,7 +54,7 @@ class GamesPage extends StatelessWidget {
                             border: Border(
                               bottom: BorderSide(
                                 width: 1.0,
-                                color: Colors.deepPurple,
+                                color: Color.fromARGB(100, 0, 0, 0),
                               )
                             )
                           ),
@@ -79,6 +80,7 @@ class GamesPage extends StatelessWidget {
                             border: Border(
                               bottom: BorderSide(
                                 width: 1.0,
+                                color: Color.fromARGB(100, 0, 0, 0),
                               )
                             )
                           ),
@@ -100,6 +102,7 @@ class GamesPage extends StatelessWidget {
                             border: Border(
                               bottom: BorderSide(
                                 width: 1.0,
+                                color: Color.fromARGB(100, 0, 0, 0),
                               )
                             )
                           ),

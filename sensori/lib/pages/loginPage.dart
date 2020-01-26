@@ -32,6 +32,8 @@ class _LoginPageState extends State<LoginPage> {
   }
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     // Scaffold is a layout for the major Material Components.
     return new Scaffold(
         appBar: new AppBar(
@@ -63,11 +65,11 @@ class _LoginPageState extends State<LoginPage> {
                 children: <Widget>[
                   new Container(
                     constraints: BoxConstraints(
-                      maxHeight: 350,
-                      maxWidth: 350,
+                      maxHeight: 400,
+                      maxWidth: 352,
                     ),
-                    padding: EdgeInsets.only(top: 40.0, left: 40.0, right: 40.0,),
-                    child: new Image.asset('assets/images/logo.png'),
+                    padding: EdgeInsets.only(top: height*0.08, left: width*0.1, right: width*0.1,),
+                    child: new Image.asset('assets/images/logo-with-name.png'),
                     )
                 ],
               ),

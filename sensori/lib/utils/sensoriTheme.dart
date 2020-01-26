@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 
 final ThemeData sensoriTheme = new ThemeData(
       primaryColor: Color.fromARGB(255, 120,19,235),
+/*    primaryColor: Color.fromARGB(255, 255, 237, 13),
+      primaryColor: Color.fromARGB(255, 12,232,53),
+      primaryColor: Color.fromARGB(255, 0, 166, 255),
+      primaryColor: Color.fromARGB(255, 255,38,30),*/
       buttonTheme: ButtonThemeData(
-        buttonColor: Colors.purple,
+        buttonColor: Color.fromARGB(255, 120,19,235),
         textTheme: ButtonTextTheme.primary
       ),
       textTheme: TextTheme(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sensori/pages/gamePage.dart';
 import 'package:sensori/pages/registerPage.dart';
 import 'package:flutter/services.dart';
+import 'package:sensori/pages/trophyRoomPage.dart';
 
 class MathGamesPage extends StatefulWidget {
   MathGamesPage({Key key, this.title}) : super(key: key);
@@ -19,6 +20,8 @@ class _MathGamesPageState extends State<MathGamesPage> {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     setOrientationToLandscape();
     // Scaffold is a layout for the major Material Components.
     return new Scaffold(
@@ -35,7 +38,9 @@ class _MathGamesPageState extends State<MathGamesPage> {
             new IconButton(
               icon: Icon(Icons.account_circle),
               tooltip: 'Trophy Room',
-              onPressed: null,
+              onPressed: () => {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => TrophyRoomPage()))
+              },
             ),
           ],
         ),
@@ -57,13 +62,15 @@ class _MathGamesPageState extends State<MathGamesPage> {
                         MaterialPageRoute(builder: (context) => GamePage()))
                   },
                   child: new Container(
+                    margin: EdgeInsets.only(top: height*0.02),
                     constraints: BoxConstraints(
                       minHeight: MediaQuery.of(context).size.height*0.15
                     ),
                     child: new Card(
-                    color: Colors.purple,
+                    color: Color.fromARGB(255, 0, 166, 255),
                     elevation: 10.0,
                     child: new Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: <Widget>[
                         new Container(
                           margin: EdgeInsets.all(6.0),
@@ -79,7 +86,11 @@ class _MathGamesPageState extends State<MathGamesPage> {
                           ),
                         ),
                         new Container(
-//                        child: new Image.asset(),
+                          constraints: new BoxConstraints(
+                            maxHeight: 100,
+                            maxWidth: 100,
+                          ),
+                        child: new Image.asset("assets/images/math/021-maths.png"),
                             )
                       ],
                     ),
@@ -95,9 +106,10 @@ class _MathGamesPageState extends State<MathGamesPage> {
                       minHeight: MediaQuery.of(context).size.height*0.15
                     ),
                     child: new Card(
-                    color: Colors.purple,
+                    color: Color.fromARGB(255, 120,19,235),
                     elevation: 10.0,
                     child: new Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: <Widget>[
                         new Container(
                           margin: EdgeInsets.all(6.0),
@@ -113,7 +125,11 @@ class _MathGamesPageState extends State<MathGamesPage> {
                           ),
                         ),
                         new Container(
-//                        child: new Image.asset(),
+                          constraints: new BoxConstraints(
+                            maxHeight: 100,
+                            maxWidth: 100,
+                          ),
+                        child: new Image.asset("assets/images/math/008-board-1.png"),
                             )
                       ],
                     ),
@@ -132,9 +148,10 @@ class _MathGamesPageState extends State<MathGamesPage> {
                       minHeight: MediaQuery.of(context).size.height*0.15
                     ),
                     child: new Card(
-                    color: Colors.purple,
+                    color: Color.fromARGB(255, 0, 166, 255),
                     elevation: 10.0,
                     child: new Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: <Widget>[
                         new Container(
                           margin: EdgeInsets.all(6.0),
@@ -150,7 +167,11 @@ class _MathGamesPageState extends State<MathGamesPage> {
                           ),
                         ),
                         new Container(
-//                        child: new Image.asset(),
+                          constraints: new BoxConstraints(
+                            maxHeight: 100,
+                            maxWidth: 100,
+                          ),
+                        child: new Image.asset("assets/images/math/013-math-2.png"),
                             )
                       ],
                     ),
@@ -166,9 +187,10 @@ class _MathGamesPageState extends State<MathGamesPage> {
                       minHeight: MediaQuery.of(context).size.height*0.15
                     ),
                     child: new Card(
-                    color: Colors.purpleAccent,
+                    color: Color.fromARGB(255, 120,19,235),
                     elevation: 10.0,
                     child: new Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: <Widget>[
                         new Container(
                           margin: EdgeInsets.all(6.0),
@@ -184,7 +206,11 @@ class _MathGamesPageState extends State<MathGamesPage> {
                           ),
                         ),
                         new Container(
-//                        child: new Image.asset(),
+                          constraints: new BoxConstraints(
+                            maxHeight: 100,
+                            maxWidth: 100,
+                          ),
+                        child: new Image.asset("assets/images/math/018-geometry-1.png"),
                             )
                       ],
                     ),
@@ -198,9 +224,10 @@ class _MathGamesPageState extends State<MathGamesPage> {
                       minHeight: MediaQuery.of(context).size.height*0.15
                     ),
                     child: new Card(
-                    color: Colors.purpleAccent,
+                    color: Color.fromARGB(255, 0, 166, 255),
                     elevation: 10.0,
                     child: new Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: <Widget>[
                         new Container(
                           margin: EdgeInsets.all(6.0),
@@ -216,7 +243,11 @@ class _MathGamesPageState extends State<MathGamesPage> {
                           ),
                         ),
                         new Container(
-//                        child: new Image.asset(),
+                          constraints: new BoxConstraints(
+                            maxHeight: 100,
+                            maxWidth: 100,
+                          ),
+                        child: new Image.asset("assets/images/math/006-pie-chart.png"),
                             )
                       ],
                     ),
