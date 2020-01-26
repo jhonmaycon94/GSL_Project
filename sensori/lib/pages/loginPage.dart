@@ -80,8 +80,7 @@ class _LoginPageState extends State<LoginPage> {
                       children: <Widget>[
                         TextFormField(
                             decoration: const InputDecoration(
-                              labelText: 'username',
-                              hintText: 'Enter your username',
+                              labelText: "Username",
                             ),
                             validator: (value) {
                               if (value.isEmpty) {
@@ -92,8 +91,7 @@ class _LoginPageState extends State<LoginPage> {
                             onSaved: (value) => _username = value),
                         new TextFormField(
                             decoration: const InputDecoration(
-                              labelText: 'password',
-                              hintText: 'Enter your password',
+                              labelText: 'Password',
                             ),
                             validator: (value) {
                               if (value.isEmpty) {

@@ -29,6 +29,8 @@ class _RegisterPageState extends State<RegisterPage> {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return new Scaffold(
         appBar: new AppBar(
             centerTitle: true,
@@ -50,8 +52,20 @@ class _RegisterPageState extends State<RegisterPage> {
         body: new Container(
           padding: EdgeInsets.all(20.0),
           child: new Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
+              new Row(
+                children: <Widget>[
+                  new Container(
+                    constraints: BoxConstraints(
+                      maxHeight: 400,
+                      maxWidth: 352,
+                    ),
+                    padding: EdgeInsets.only(top: height*0.08, left: width*0.1, right: width*0.1,),
+                    child: new Image.asset('assets/images/logo-with-name.png'),
+                    )
+                ],
+              ),
               new Form(
                 key: _formKey,
                 child: Column(
@@ -59,8 +73,8 @@ class _RegisterPageState extends State<RegisterPage> {
                   children: <Widget>[
                     TextFormField(
                         decoration: const InputDecoration(
-                            labelText: 'nickname',
-                            hintText: 'Enter your nickname'),
+                            labelText: 'How should we call you?',
+                          ),
                         validator: (value) {
                           if (value.isEmpty) {
                             return 'username cannot be empty';
@@ -70,8 +84,8 @@ class _RegisterPageState extends State<RegisterPage> {
                         onSaved: (value) => _nickname = value),
                     new TextFormField(
                       decoration: const InputDecoration(
-                          labelText: 'username',
-                          hintText: 'Enter your username'),
+                          labelText: 'What name you want to login with?',
+                         ),
                       validator: (value) {
                         if (value.isEmpty) {
                           return 'username cannot be empty';
@@ -82,8 +96,8 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                     new TextFormField(
                       decoration: const InputDecoration(
-                          labelText: 'password',
-                          hintText: 'Enter your password'),
+                          labelText: 'Choose a password',
+                          ),
                       obscureText: true,
                       validator: (value) {
                         if (value.isEmpty) {
@@ -95,8 +109,8 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                     new TextFormField(
                       decoration: const InputDecoration(
-                          labelText: 'Confirm Password',
-                          hintText: 'Confirm your password'),
+                          labelText: 'Please repeat the password',
+                          ),
                       obscureText: true,
                       validator: (value) {
                         if (value.isEmpty) {

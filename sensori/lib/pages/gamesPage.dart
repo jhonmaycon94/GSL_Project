@@ -28,6 +28,7 @@ class GamesPage extends StatelessWidget {
                   maxWidth: MediaQuery.of(context).size.width,
                   maxHeight: 180),
                   decoration: BoxDecoration(
+//                    color: Color.fromARGB(255, 0, 166, 255),
                             border: Border(
                               bottom: BorderSide(
                                 width: 1.0,
@@ -36,7 +37,6 @@ class GamesPage extends StatelessWidget {
                             )
                           ),
               padding: EdgeInsets.all(height * 0.02),
-//              margin: EdgeInsets.only(bottom: height * 0.04),
               child: Image.asset("assets/images/logo.png"),
             ),
             new Container(
@@ -51,6 +51,7 @@ class GamesPage extends StatelessWidget {
                           },
                       child: new Container(
                           decoration: BoxDecoration(
+//                            color: Color.fromARGB(255, 120,19,235),
                             border: Border(
                               bottom: BorderSide(
                                 width: 1.0,
@@ -58,7 +59,7 @@ class GamesPage extends StatelessWidget {
                               )
                             )
                           ),
-                      margin: EdgeInsets.only(bottom: height * 0.01),
+            //          margin: EdgeInsets.only(bottom: height * 0.01),
                           padding: EdgeInsets.all(height * 0.03),
                           child: new Row(
                             children: <Widget>[
@@ -77,6 +78,7 @@ class GamesPage extends StatelessWidget {
                           },
                       child: new Container(
                         decoration: BoxDecoration(
+//                          color: Color.fromARGB(255, 255,38,30),
                             border: Border(
                               bottom: BorderSide(
                                 width: 1.0,
@@ -85,7 +87,6 @@ class GamesPage extends StatelessWidget {
                             )
                           ),
                         padding: EdgeInsets.all(height * 0.03),
-                        margin: EdgeInsets.only(bottom: height * 0.01),
                         child: new Row(
                           children: <Widget>[new Text("Register")],
                         ),
@@ -99,6 +100,7 @@ class GamesPage extends StatelessWidget {
                     },
                     child: new Container(
                       decoration: BoxDecoration(
+//                        color: Color.fromARGB(255, 0, 166, 255),
                             border: Border(
                               bottom: BorderSide(
                                 width: 1.0,
@@ -106,7 +108,6 @@ class GamesPage extends StatelessWidget {
                               )
                             )
                           ),
-                        margin: EdgeInsets.only(bottom: height * 0.01),
                         padding: EdgeInsets.all(height * 0.03),
                         child: new Row(
                           children: <Widget>[

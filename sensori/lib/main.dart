@@ -11,11 +11,8 @@ import 'package:sensori/pages/mathGamesPage.dart';
 
 void main() {
   runApp(MaterialApp(
-//    home: LoginPage(title: ""),
-//    home: RegisterPage(title: "",),
-   home: GamesPage(title: "Trophy Room"),
-//    home: MathGamesPage(title: "Math Games",),
-//      home: LearningTypePage(title: "",),
+    debugShowCheckedModeBanner: false,
+   home: GamesPage(title: "Games"),
     theme: sensoriTheme,
   ));
 }

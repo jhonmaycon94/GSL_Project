@@ -148,7 +148,7 @@ class _MathGamesPageState extends State<MathGamesPage> {
                       minHeight: MediaQuery.of(context).size.height*0.15
                     ),
                     child: new Card(
-                    color: Color.fromARGB(255, 0, 166, 255),
+                    color: Color.fromARGB(255, 255,38,30),
                     elevation: 10.0,
                     child: new Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -224,7 +224,7 @@ class _MathGamesPageState extends State<MathGamesPage> {
                       minHeight: MediaQuery.of(context).size.height*0.15
                     ),
                     child: new Card(
-                    color: Color.fromARGB(255, 0, 166, 255),
+                    color: Color.fromARGB(255, 255, 237, 13),
                     elevation: 10.0,
                     child: new Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
