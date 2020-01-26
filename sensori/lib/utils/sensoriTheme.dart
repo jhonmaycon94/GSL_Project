@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 final ThemeData sensoriTheme = new ThemeData(
-      primaryColor: Colors.purple,
+      primaryColor: Color.fromARGB(255, 120,19,235),
       buttonTheme: ButtonThemeData(
         buttonColor: Colors.purple,
         textTheme: ButtonTextTheme.primary
@@ -24,9 +24,11 @@ final ThemeData sensoriTheme = new ThemeData(
         button: TextStyle(
           fontFamily: 'SeymourOne',
           fontWeight: FontWeight.bold,
-        )
-
-
-        )
-    );
+        ),
+        overline:  TextStyle(
+          fontFamily: 'Orbitron',
+          fontWeight: FontWeight.w900,
+        ) 
+        ), 
+        );
 

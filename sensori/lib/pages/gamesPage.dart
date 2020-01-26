@@ -27,8 +27,15 @@ class GamesPage extends StatelessWidget {
                   minWidth: MediaQuery.of(context).size.width,
                   maxWidth: MediaQuery.of(context).size.width,
                   maxHeight: 180),
+                  decoration: BoxDecoration(
+                            border: Border(
+                              bottom: BorderSide(
+                                width: 1.0,
+                              )
+                            )
+                          ),
               padding: EdgeInsets.all(height * 0.02),
-              margin: EdgeInsets.only(bottom: height * 0.04),
+//              margin: EdgeInsets.only(bottom: height * 0.04),
               child: Image.asset("assets/images/logo.png"),
             ),
             new Container(
@@ -43,12 +50,14 @@ class GamesPage extends StatelessWidget {
                           },
                       child: new Container(
                           decoration: BoxDecoration(
-                        boxShadow: [BoxShadow(
-                          blurRadius: 5.0,
-                          color: Colors.purple,
-                          offset: Offset(-1.0, -1.0)
-                        )],
-                      ),
+                            border: Border(
+                              bottom: BorderSide(
+                                width: 1.0,
+                                color: Colors.deepPurple,
+                              )
+                            )
+                          ),
+                      margin: EdgeInsets.only(bottom: height * 0.01),
                           padding: EdgeInsets.all(height * 0.03),
                           child: new Row(
                             children: <Widget>[
@@ -67,13 +76,14 @@ class GamesPage extends StatelessWidget {
                           },
                       child: new Container(
                         decoration: BoxDecoration(
-                        boxShadow: [BoxShadow(
-                          blurRadius: 5.0,
-                          color: Colors.purple,
-                          offset: Offset(-1.0, -1.0)
-                        )],
-                      ),
+                            border: Border(
+                              bottom: BorderSide(
+                                width: 1.0,
+                              )
+                            )
+                          ),
                         padding: EdgeInsets.all(height * 0.03),
+                        margin: EdgeInsets.only(bottom: height * 0.01),
                         child: new Row(
                           children: <Widget>[new Text("Register")],
                         ),
@@ -87,12 +97,13 @@ class GamesPage extends StatelessWidget {
                     },
                     child: new Container(
                       decoration: BoxDecoration(
-                        color: Colors.purple,
-                        boxShadow: [BoxShadow(
-                          blurRadius: 5.0,
-                          offset: Offset(-1.0, -1.0)
-                        )],
-                      ),
+                            border: Border(
+                              bottom: BorderSide(
+                                width: 1.0,
+                              )
+                            )
+                          ),
+                        margin: EdgeInsets.only(bottom: height * 0.01),
                         padding: EdgeInsets.all(height * 0.03),
                         child: new Row(
                           children: <Widget>[

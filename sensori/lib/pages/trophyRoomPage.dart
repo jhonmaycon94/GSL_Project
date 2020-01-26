@@ -51,17 +51,18 @@ class _TrophyRoomPageState extends State<TrophyRoomPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   new Container(
-                      decoration: new BoxDecoration(
-                        borderRadius: new BorderRadius.circular(5.0),
-                        color: Colors.orange,
-                      ),
                       margin: EdgeInsets.all(10.0),
-                      child: new Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      child: new Stack(
                         children: <Widget>[
-                          new Container(
-                            child: new Text("data"),
+                          new Positioned(
+                            child: new Container(
+                              decoration: new BoxDecoration(
+                            borderRadius: new BorderRadius.circular(5.0),
+                            color: Color.fromARGB(255, 255, 237, 13),
                           ),
+                              child: new Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: <Widget>[
                           new Container(
                             child: new Row(
                               children: <Widget>[
@@ -82,11 +83,8 @@ class _TrophyRoomPageState extends State<TrophyRoomPage> {
                                     height: 60,
                                     width: 60,
                                   ),
-                                )
-                              ],
-                            ),
-                          ),
-                          new Container(
+                                ),
+                                new Container(
                             child: new Row(
                               children: <Widget>[
                                 new Container(
@@ -110,6 +108,27 @@ class _TrophyRoomPageState extends State<TrophyRoomPage> {
                               ],
                             ),
                           )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                            ),
+                          ),
+                          new Positioned(
+                            child: new Container(
+                              constraints: BoxConstraints(
+                                maxHeight: 100,
+                                maxWidth: 100,
+                                minWidth: 100,
+                                minHeight: 100
+                              ),
+                              decoration: new BoxDecoration(
+                                shape: BoxShape.circle,
+                              ),
+                              child: new Image.asset("assets/images/planet1.png"),
+                            ),
+                          ),
                         ],
                       )),
                   new Container(

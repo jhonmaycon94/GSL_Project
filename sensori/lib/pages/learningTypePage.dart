@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sensori/pages/registerPage.dart';
+import 'package:sensori/pages/trophyRoomPage.dart';
 
 class LearningTypePage extends StatefulWidget {
   LearningTypePage({Key key, this.title}) : super(key: key);
@@ -25,9 +26,11 @@ class _LearningTypePageState extends State<LearningTypePage> {
             appBar: new AppBar(
               centerTitle: true,
               leading: new IconButton(
-                icon: Icon(Icons.menu),
-                tooltip: 'Navigation menu',
-                onPressed: null,
+                icon: Icon(Icons.arrow_back),
+                tooltip: 'back',
+                onPressed: () => {
+                  Navigator.pop(context)
+                },
               ),
               title: new Text('Learning Types',
               style: Theme.of(context).textTheme.title,),
@@ -35,7 +38,9 @@ class _LearningTypePageState extends State<LearningTypePage> {
                 new IconButton(
                   icon: Icon(Icons.account_circle),
                   tooltip: 'Trophy Room',
-                  onPressed: null,
+                  onPressed: () => {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => TrophyRoomPage()))
+                  },
                 ),
               ],
             ),
