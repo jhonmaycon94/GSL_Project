@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sensori/pages/registerPage.dart';
 import 'package:sensori/pages/trophyRoomPage.dart';
+import 'package:sensori/utils/utils.dart';
 
 class LearningTypePage extends StatefulWidget {
   LearningTypePage({Key key, this.title}) : super(key: key);
@@ -38,7 +39,7 @@ class _LearningTypePageState extends State<LearningTypePage> {
                   icon: Icon(Icons.account_circle),
                   tooltip: 'Trophy Room',
                   onPressed: () => {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => TrophyRoomPage()))
+                    Navigator.push(context, SlideLeftRoute(page: TrophyRoomPage()))
                   },
                 ),
               ],
@@ -52,7 +53,7 @@ class _LearningTypePageState extends State<LearningTypePage> {
                   new Column(
                     children: <Widget>[
                       new Container(
-                        child: new Text("Pergunta"),
+                        child: new Text("What kind of book would you like to read for fun?"),
                       ),
                       new Container(
                         child: new Column(
@@ -64,7 +65,7 @@ class _LearningTypePageState extends State<LearningTypePage> {
                               groupValue: _radioValue1,
                               onChanged: _handleRadioValueChange1(), 
                         ),
-                        new Text("Resposta1")
+                        new Text("A book with lots of pictures in it")
                               ],
                             ),
                         new Row(
@@ -74,7 +75,7 @@ class _LearningTypePageState extends State<LearningTypePage> {
                               groupValue: _radioValue1,
                               onChanged: _handleRadioValueChange1(), 
                         ),
-                        new Text("Resposta2")
+                        new Text("A book with lots of words in it")
                               ],
                             ),
                             new Row(
@@ -84,7 +85,7 @@ class _LearningTypePageState extends State<LearningTypePage> {
                               groupValue: _radioValue1,
                               onChanged: _handleRadioValueChange1(), 
                         ),
-                        new Text("Resposta3")
+                        new Text("A book with word searches or crossword puzzles")
                               ],
                             ),
                       ],

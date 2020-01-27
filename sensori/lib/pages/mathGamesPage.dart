@@ -3,6 +3,7 @@ import 'package:sensori/pages/gamePage.dart';
 import 'package:sensori/pages/registerPage.dart';
 import 'package:flutter/services.dart';
 import 'package:sensori/pages/trophyRoomPage.dart';
+import 'package:sensori/utils/utils.dart';
 
 class MathGamesPage extends StatefulWidget {
   MathGamesPage({Key key, this.title}) : super(key: key);
@@ -39,7 +40,7 @@ class _MathGamesPageState extends State<MathGamesPage> {
               icon: Icon(Icons.account_circle),
               tooltip: 'Trophy Room',
               onPressed: () => {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => TrophyRoomPage()))
+                Navigator.push(context, SlideLeftRoute(page: TrophyRoomPage()))
               },
             ),
           ],
@@ -59,7 +60,7 @@ class _MathGamesPageState extends State<MathGamesPage> {
                 child: new GestureDetector(
                   onTap: () => {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => GamePage()))
+                        ScaleRoute(page: GamePage()))
                   },
                   child: new Container(
                     margin: EdgeInsets.only(top: height*0.02),

@@ -47,7 +47,7 @@ class GamesPage extends StatelessWidget {
                       onTap: () => {
                             Navigator.push(
                                 context,
-                                RotationRoute(
+                                SizeRoute(
                                     page: LoginPage("Login")))
                           },
                       child: new Container(
@@ -96,7 +96,7 @@ class GamesPage extends StatelessWidget {
                     onTap: () => {
                       Navigator.push(
                           context,
-                          FadeRoute(
+                          SizeRoute(
                               page: LearningTypePage()))
                     },
                     child: new Container(
@@ -135,7 +135,7 @@ class GamesPage extends StatelessWidget {
               onPressed: () => {
                 Navigator.push(
                     context,
-                    SlideRightRoute(
+                    SlideLeftRoute(
                         page: TrophyRoomPage(title: "Trophy")))
               },
             )

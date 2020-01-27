@@ -62,9 +62,9 @@ class ScaleRoute extends PageRouteBuilder {
         );
 }
 
-class SlideRightRoute extends PageRouteBuilder {
+class SlideLeftRoute extends PageRouteBuilder {
   final Widget page;
-  SlideRightRoute({this.page})
+  SlideLeftRoute({this.page})
       : super(
           pageBuilder: (
             BuildContext context,
@@ -80,7 +80,7 @@ class SlideRightRoute extends PageRouteBuilder {
           ) =>
               SlideTransition(
                 position: Tween<Offset>(
-                  begin: const Offset(-1, 0),
+                  begin: const Offset(1, 0),
                   end: Offset.zero,
                 ).animate(animation),
                 child: child,

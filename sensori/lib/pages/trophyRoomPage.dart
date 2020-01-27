@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sensori/pages/registerPage.dart';
+import 'package:sensori/utils/utils.dart';
+
+import 'gamesPage.dart';
 
 class TrophyRoomPage extends StatefulWidget {
   TrophyRoomPage({Key key, this.title}) : super(key: key);
@@ -30,9 +33,9 @@ class _TrophyRoomPageState extends State<TrophyRoomPage> {
           ),
           actions: <Widget>[
             new IconButton(
-              icon: Icon(Icons.account_circle),
-              tooltip: 'Trophy Room',
-              onPressed: null,
+              icon: Icon(Icons.home),
+              tooltip: 'Home',
+              onPressed: () => Navigator.push(context, SlideLeftRoute(page: GamesPage())),
             ),
           ],
         ),
