@@ -75,9 +75,11 @@ class _MathGamesPageState extends State<MathGamesPage> {
                         new Container(
                           margin: EdgeInsets.all(6.0),
                           child: new Text(
-                            "Equations Puzzle",
+                            "Equations\n Puzzle",
+                            textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.white,
+                              fontSize: 30.0,
                               shadows: [Shadow(
                                 blurRadius: 2.0,
                                 color: Colors.black,
@@ -114,9 +116,11 @@ class _MathGamesPageState extends State<MathGamesPage> {
                         new Container(
                           margin: EdgeInsets.all(6.0),
                           child: new Text(
-                            "Fractions Puzzle",
+                            "Fractions\n Puzzle",
+                            textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.white,
+                              fontSize: 30.0,
                               shadows: [Shadow(
                                 blurRadius: 2.0,
                                 color: Colors.black,
@@ -156,9 +160,11 @@ class _MathGamesPageState extends State<MathGamesPage> {
                         new Container(
                           margin: EdgeInsets.all(6.0),
                           child: new Text(
-                            "Arithmetic Puzzle",
+                            "Arithmetic\n Puzzle",
+                            textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.white,
+                              fontSize: 30.0,
                               shadows: [Shadow(
                                 blurRadius: 2.0,
                                 color: Colors.black,
@@ -195,8 +201,10 @@ class _MathGamesPageState extends State<MathGamesPage> {
                         new Container(
                           margin: EdgeInsets.all(6.0),
                           child: new Text(
-                            "Geometry Puzzle",
+                            "Geometry\n Puzzle",
+                            textAlign: TextAlign.center,
                             style: TextStyle(
+                              fontSize: 30.0,
                               color: Colors.white,
                               shadows: [Shadow(
                                 blurRadius: 2.0,
@@ -232,9 +240,11 @@ class _MathGamesPageState extends State<MathGamesPage> {
                         new Container(
                           margin: EdgeInsets.all(6.0),
                           child: new Text(
-                            "Division Puzzle",
+                            "Division\n Puzzle",
+                            textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.white,
+                              fontSize: 30.0,
                               shadows: [Shadow(
                                 blurRadius: 2.0,
                                 color: Colors.black,
