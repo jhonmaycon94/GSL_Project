@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sensori/pages/registerPage.dart';
 import 'package:sensori/pages/trophyRoomPage.dart';
 import 'package:sensori/pages/mathGamesPage.dart';
+import 'package:sensori/utils/utils.dart';
 
 import 'learningTypePage.dart';
 import 'loginPage.dart';
@@ -46,8 +47,8 @@ class GamesPage extends StatelessWidget {
                       onTap: () => {
                             Navigator.push(
                                 context,
-                                MaterialPageRoute(
-                                    builder: (context) => LoginPage("Login")))
+                                RotationRoute(
+                                    page: LoginPage("Login")))
                           },
                       child: new Container(
                           decoration: BoxDecoration(
@@ -72,8 +73,8 @@ class GamesPage extends StatelessWidget {
                       onTap: () => {
                             Navigator.push(
                                 context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
+                                SizeRoute(
+                                    page:
                                         RegisterPage("Register")))
                           },
                       child: new Container(
@@ -95,8 +96,8 @@ class GamesPage extends StatelessWidget {
                     onTap: () => {
                       Navigator.push(
                           context,
-                          MaterialPageRoute(
-                              builder: (context) => LearningTypePage()))
+                          FadeRoute(
+                              page: LearningTypePage()))
                     },
                     child: new Container(
                       decoration: BoxDecoration(
@@ -134,8 +135,8 @@ class GamesPage extends StatelessWidget {
               onPressed: () => {
                 Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => TrophyRoomPage(title: "Trophy")))
+                    SlideRightRoute(
+                        page: TrophyRoomPage(title: "Trophy")))
               },
             )
           ]),
@@ -304,8 +305,8 @@ class GamesPage extends StatelessWidget {
                         onPressed: () => {
                           Navigator.push(
                               context,
-                              MaterialPageRoute(
-                                  builder: (context) => MathGamesPage()))
+                              ScaleRoute(
+                                  page: MathGamesPage()))
                         },
                       ),
                     ),
