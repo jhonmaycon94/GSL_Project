@@ -57,6 +57,7 @@ class _LoginPageState extends State<LoginPage> {
         ),
         // body is the majority of the screen.
         body: new Container(
+//          color: Colors.grey[200],
           padding: EdgeInsets.all(20.0),
           child: new Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -115,7 +116,10 @@ class _LoginPageState extends State<LoginPage> {
                   new Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
-                      new Text("don't have an account?"),
+                      new Text("don't have an account?",
+                      style: new TextStyle(
+                        color: Color.fromARGB(255, 0, 166, 255),
+                      )),
                       new RaisedButton(
                         child: new Text(
                           "Register",

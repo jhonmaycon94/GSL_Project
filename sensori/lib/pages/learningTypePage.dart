@@ -12,7 +12,6 @@ class LearningTypePage extends StatefulWidget {
 }
 
 class _LearningTypePageState extends State<LearningTypePage> {
-  final _formKey = new GlobalKey<FormState>();
 
   _handleRadioValueChange1(){
 
@@ -46,6 +45,7 @@ class _LearningTypePageState extends State<LearningTypePage> {
             ),
             // body is the majority of the screen.
             body: new Container(
+              color: Color.fromARGB(255, 0, 166, 255),
               padding: EdgeInsets.only(top: 20.0),
               child: new Column(
                 children: <Widget>[
