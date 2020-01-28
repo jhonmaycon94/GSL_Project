@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sensori/pages/gamePage.dart';
-import 'package:sensori/pages/registerPage.dart';
 import 'package:flutter/services.dart';
 import 'package:sensori/pages/trophyRoomPage.dart';
 import 'package:sensori/utils/utils.dart';
@@ -21,7 +20,6 @@ class _MathGamesPageState extends State<MathGamesPage> {
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     setOrientationToLandscape();
     // Scaffold is a layout for the major Material Components.

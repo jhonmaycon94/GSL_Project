@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:sensori/utils/utils.dart';
+
+import 'gamesPage.dart';
 
 class RegisterPage extends StatefulWidget {
   RegisterPage(String s, {Key key, this.title}) : super(key: key);
@@ -44,9 +47,9 @@ class _RegisterPageState extends State<RegisterPage> {
             title: new Text('Register'),
             actions: <Widget>[
               new IconButton(
-                icon: Icon(Icons.search),
-                tooltip: 'Search',
-                onPressed: null,
+                icon: Icon(Icons.home),
+                tooltip: 'Home',
+                onPressed: () => Navigator.push(context, SlideLeftRoute(page: GamesPage())),
               )
             ]),
         body: new Container(
@@ -77,7 +80,7 @@ class _RegisterPageState extends State<RegisterPage> {
                           ),
                         validator: (value) {
                           if (value.isEmpty) {
-                            return 'username cannot be empty';
+                            return 'nickname cannot be empty';
                           }
                           return null;
                         },

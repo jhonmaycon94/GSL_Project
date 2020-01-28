@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sensori/pages/registerPage.dart';
 import 'package:sensori/utils/utils.dart';
 
 import 'gamesPage.dart';

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sensori/pages/registerPage.dart';
+import 'package:sensori/utils/utils.dart';
+
+import 'gamesPage.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage(String s, {Key key, this.title}) : super(key: key);
@@ -49,9 +52,9 @@ class _LoginPageState extends State<LoginPage> {
           style: Theme.of(context).textTheme.title,),
           actions: <Widget>[
             new IconButton(
-              icon: Icon(Icons.account_circle),
-              tooltip: 'Trophy Room',
-              onPressed: null,
+              icon: Icon(Icons.home),
+                tooltip: 'Home',
+                onPressed: () => Navigator.push(context, SlideLeftRoute(page: GamesPage())),
             ),
           ],
         ),

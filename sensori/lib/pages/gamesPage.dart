@@ -14,7 +14,6 @@ class GamesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return new Scaffold(
       drawer: Drawer(
@@ -116,6 +115,40 @@ class GamesPage extends StatelessWidget {
                           ],
                         )),
                   ),
+                  new GestureDetector(
+                      onTap: null,
+                      child: new Container(
+                        decoration: BoxDecoration(
+//                          color: Color.fromARGB(255, 255,38,30),
+                            border: Border(
+                              bottom: BorderSide(
+                                width: 1.0,
+                                color: Color.fromARGB(100, 0, 0, 0),
+                              )
+                            )
+                          ),
+                        padding: EdgeInsets.all(height * 0.03),
+                        child: new Row(
+                          children: <Widget>[new Text("Configurações")],
+                        ),
+                      )),
+                      new GestureDetector(
+                      onTap: null,
+                      child: new Container(
+                        decoration: BoxDecoration(
+//                          color: Color.fromARGB(255, 255,38,30),
+                            border: Border(
+                              bottom: BorderSide(
+                                width: 1.0,
+                                color: Color.fromARGB(100, 0, 0, 0),
+                              )
+                            )
+                          ),
+                        padding: EdgeInsets.all(height * 0.03),
+                        child: new Row(
+                          children: <Widget>[new Text("Contato")],
+                        ),
+                      )),
                 ],
               ),
             ),

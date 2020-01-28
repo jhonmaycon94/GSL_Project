@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sensori/pages/registerPage.dart';
 import 'package:flutter/services.dart';
 
 class EquationPuzzlePage extends StatelessWidget {
